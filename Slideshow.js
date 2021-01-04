@@ -11,6 +11,7 @@ import {
   TouchableHighlight,
   TouchableOpacity,
   Dimensions,
+  ImageResizeMode,
 } from 'react-native';
 
 const reactNativePackage = require('react-native/package.json');
@@ -202,6 +203,7 @@ export default class Slideshow extends Component {
             const imageComponent = (
               <View key={index}>
                 <Image
+                  resizeMode={ImageResizeMode}
                   source={imageObject}
                   style={{height, width}}/>
                 {textComponent}
